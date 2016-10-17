@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" cache="true" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" vgap="10" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <children>
+            <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="29.0" prefWidth="597.0">
+              <menus>
+                <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="btOpen" mnemonicParsing="false" onAction="#Abrir" text="Abrir" />
+                        <MenuItem fx:id="btSave" mnemonicParsing="false" onAction="#Guardar" text="Save" />
+                        <MenuItem fx:id="btExit" mnemonicParsing="false" onAction="#Exit" text="Salir" />
+                  </items>
+                </Menu>
+                <Menu fx:id="menuEdit" mnemonicParsing="false" onAction="#setEdit" text="Edit">
+                  <items>
+                        <MenuItem fx:id="btCopy" mnemonicParsing="false" onAction="#Copiar" text="Copiar" />
+                        <MenuItem fx:id="btDelete" mnemonicParsing="false" onAction="#Delete" text="Delete" />
+                        <MenuItem fx:id="btCut" mnemonicParsing="false" onAction="#Cut" text="Cortar" />
+                        <MenuItem fx:id="btPaste" mnemonicParsing="false" onAction="#Paste" text="Pegar" />
+                        <MenuItem fx:id="btDeshacer" mnemonicParsing="false" onAction="#Deshacer" text="Deshacer" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuOpciones" mnemonicParsing="false" text="Options">
+                    <items>
+                        <Menu fx:id="menuFont" mnemonicParsing="false" text="Font">
+                          <items>
+                            <MenuItem fx:id="btArial" mnemonicParsing="false" onAction="#setArial" text="Arial">
+                                 <graphic>
+                                    <RadioButton fx:id="chkArial" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                            <MenuItem fx:id="btComics" mnemonicParsing="false" onAction="#SetComicSans" text="Comic Sans">
+                                 <graphic>
+                                    <RadioButton fx:id="chkComic" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                              <MenuItem fx:id="btTimes" mnemonicParsing="false" onAction="#setTimes" text="Times New Roman">
+                                 <graphic>
+                                    <RadioButton fx:id="chkTimes" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                        <Menu fx:id="menuTamany" mnemonicParsing="false" text="Tamany">
+                          <items>
+                            <MenuItem fx:id="btBig" mnemonicParsing="false" onAction="#setBig" text="Mas Grande">
+                                 <graphic>
+                                    <RadioButton fx:id="chkBig" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                              <MenuItem fx:id="btSmall" mnemonicParsing="false" onAction="#setSmall" text="Mas Pequeña">
+                                 <graphic>
+                                    <RadioButton fx:id="chkSmall" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                              <MenuItem fx:id="btT12" mnemonicParsing="false" onAction="#setT12" text="12">
+                                 <graphic>
+                                    <RadioButton fx:id="chk12" mnemonicParsing="false" />
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="btInfo" mnemonicParsing="false" onAction="#Info" text="Sobre l'editor" />
+                  </items>
+                </Menu>
+              </menus>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </MenuBar>
+            <TextArea fx:id="txtArea" layoutX="14.0" layoutY="119.0" />
+            <ToolBar layoutY="32.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="169.0">
+              <items>
+                  <Button fx:id="btCopiar" mnemonicParsing="false" onAction="#Copiar" text="Copy" />
+                <Button fx:id="btCortar" mnemonicParsing="false" onAction="#Cut" text="Cut" />
+                  <Button fx:id="btPegar" mnemonicParsing="false" onAction="#Paste" text="Paste" />
+              </items>
+            </ToolBar>
+         </children></Pane>
+   </children>
+</GridPane>
